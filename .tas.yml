@@ -1,0 +1,16 @@
+---
+framework: mocha
+preRun:
+     command:
+        - npm install
+        - npm run tsc
+preMerge:
+  pattern:
+    - __test__/*.js
+postMerge:
+  pattern: 
+    - __test__/*.js
+postRun:
+     command:
+        - node --version
+version: 1.0
